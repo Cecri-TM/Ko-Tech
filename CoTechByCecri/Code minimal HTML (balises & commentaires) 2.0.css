@@ -1,0 +1,654 @@
+p/*paragraphe*/ /*mais je peux aussi mettre h1 ou h2 etc ou deux ligne comme p, h1*/
+{
+	color: blue; /*donne la couleur au paragraphe (bleue ici)*/
+	font-weight: bold; /*paragraphe en bleu et en gras*/
+	font-size: 24px; /*taille de la police à 24*  on peut aussi utilise 1.5em par exemple*/
+	font-family: Impact, "Arial Black", Arial, Georgia, Verdana; /*changer la police */
+	font-style: italic; /*mettre en italic*/
+	text-decoration: underline; /*souligner texte*/
+	text-align: center; /*aligner texte right center ou left*/
+	border: 3px black solid; /*bordure de 3 px(taille) black (couleur) solide(trait)*/ 
+	/*il existe pour les traits : (solid, dotted, dashed, double, groove, ridge, inset, outset);*/
+	border-top: ;/*bordure en haut*/
+	border-bottom: ;/*bordure en bas*/
+	border-left: ;
+	border-right: ;
+	border-radius: 20px / 10px ;/*rondeur aux bordures (la deuxième valeur peut être absente)*/
+	box-shadow: 6px 6px 0px black; ;/*ombre pour le bloc* (décalage H de l'ombre, V de l'ombre, adoussicement de l'ombre, couleur de l'ombre*/
+	text-shadow: 2px 4px 5px ;/*ombre sur le texte directement */
+
+
+} 
+
+
+a:hover
+{
+	color: black; /*permet de changer la couleur des liens au survol de la souris*/
+
+}
+
+a:visited
+{
+	color: #888888; /*changer la couleur du lien quand il a déja été visité*/
+}
+
+/*pour juste changer la couleur d'un paragraphe par exemple
+je peux ausi le modifier depuis html 
+en ajoutant apres son attribut (p par exemple ou h1) 
+class="(nom de la classe)" et ensuite continuer*/
+ 
+ /*exemple*/
+sur /*html*/ <p class="(nom de la classe)"> (le texte à entrer) </p>
+et sur Css avant {} je devrais entrer .(nom de la classe)
+
+/*pour changer spécifiquement un mot par exemple 
+on l'entour de la balise*/ spam 
+ex: <p> Bonjour et <spam class="(nom de la classe)"> (le texte qui sera modifié (ici bienvenue)) </spam> sur mon site </p>
+
+
+
+/*pour les blocks*/
+
+h1
+{
+ width: 600px;/*manipule la largeur du block (associer à background-color: pour voir la différence*/
+ height: ;/*manipule la hauteur du block*/
+ min-width: ;/*largeur minimal*/
+ max-width: ;/*largeur maximal*/
+ min-height: ;/*hauteur minimal*/
+ max-height: ;/*hauteur maximal*/
+
+ margin: 10px;/*marge extérieur de 10 px du block*/
+ padding:  ;/*marge intéreiur du block*/
+ /*on peut aussi utiliser padding ou margin left right top ou bottom pour un seul coté etc..*/
+ /*ou tout simplement écrire*/
+ margin: 1px 2px 3px 4px; /* 1px représente(marge intérieur en haut) 2px(à droite) 3px(en bas) et 4px(à gauche)*/
+
+/*si on indique la largeur du block on peut aussi calculer automatiment les marges sur un block 
+pour le centrer sur la page avec */
+margin:auto;
+
+/*si ya trop de texte dans un block et qu'il dépasse (par le bas) on peut utiliser*/
+overflow: auto;/*(le navigateur décide ce qu'il va faire mais la plus souvent il fait défiler 
+on peut aussi utiliser scroll, visible ou hidden )*/
+word-wrap: break-word;
+/*si le mot est trop long pour le block on peut utiliser*/
+
+/*pour revenir à la ligne*/
+}
+
+
+/*flexblox*/
+
+/*pour aligner les block on ajoute la balise si dessous sur le block qui contient*/
+/*exemple*/
+h1
+{
+	display: flex;
+	flex-wrap: wrap;/*aller à la ligne quand on ressere la page*/
+	justify-content: ;/*délimiter les éléments sur la ligne*/
+	justify-content: flex-start;/*au début */
+	justify-content: flex-end;/*a la fin*/
+	justify-content: center;/*au centre*/
+	justify-content: space-between;/* de l'espace entre eux*/
+	justify-content: space-around;/*espacé partout*/
+	margin: auto;/*pour dentrer tous les éléments du block*/
+	align-content: /*la meme chose que justify content saud que c'est pour les lignes*/
+
+}
+/*Les propriétés CSS liées à la police*/
+{
+	font-family : ;/**/
+	font-size : medium ;/*La propriété font-size indique la hauteur souhaitée des glyphes à partir de la police.*/
+	font-family : serif ;/*La propriété font-family spécifie une liste hiérarchisée de noms de familles de
+	polices ou de noms de familles génériques*/
+	font-weight : ;/*La propriété font-weight spécifie le poids des glyphes dans la police, leur degré
+	de noirceur ou l’épaisseur du trait.*/
+	/*bold : gras
+	bolder : plus gras
+	lighter : plus fin
+	normal : pas gras (par défaut) 
+	*/
+	font-style : ;/*La propriété font-style permet de sélectionner une forme italique ou oblique
+	pour une police.*/
+	/*italic : italique
+	oblique : autre façon de mettre en italique
+	normal : normal (par défaut) */
+	letter-spacing : ; /*permet d'ajuster l'espace entre chaque lettres. Valeurs possibles : "normal", ou une unité de longueur*/
+	text-shadow: ; /*permet de créer une ombre au texte. Valeurs possibles : "none", une couleur et / ou une longueur.*/ 
+	word-spacing: ; /*permet d'ajuster l'espace entre chaque mot. Valeurs possibles : "normal", ou une longueur. */
+	direction: ; /*permet de choisir le sens du texte. Valeurs possibles : "ltr" de gauche à droite, "rtl" de droite à gauche. */
+	text-decoration : ; /**/
+	/*underline : souligné
+	overline : ligne au-dessus
+	line-through : barré
+	blink : clignotant
+	none : normal (par défaut)*/
+	text-transform : ; /*La propriété text-transform permet de transformer le texte pour le styliser.*/
+	/*uppercase : tout mettre en majuscules
+	lowercase : tout mettre en minuscules
+	capitalize : début des mots en majuscules
+	none : normal (par défaut) */
+	font-stretch : ;/*La propriété font-stretch sélectionne une forme normale, condensée ou
+	étendue dans une famille de polices.*/
+}
+
+/*Les propriétés CSS liées au texte*/
+{
+	text-transform : ;/**/
+	color: ;/*Indiquer une couleur avec l'une des méthodes suivantes : */
+	/*• En tapant le nom de la couleur en anglais (black, blue, green, white, red...).
+	En indiquant la couleur en hexadécimal (#CC48A1)
+	En indiquant la couleur en RGB : rgb (128, 255, 0) */
+	text-align : ;/*Alignement horizontal*/
+	/*left : à gauche (par défaut)
+	center : centré
+	right : à droite
+	justify : texte justifié (prend toute la largeur de la page) */
+	vertical-align: ;/*Alignement vertical*/
+	/*A utiliser dans des cellules de tableau.
+	top : en haut
+	middle : au milieu
+	bottom : en bas
+	Hauteur de ligne line-height Indiquer une valeur*/
+	text-wrap : ;/*La propriété text-wrap spécifie le mode d’habillage du texte*/
+	text-justify : ;/*La propriété text-justify sélectionne la méthode de justification utilisée lorsque
+	l’élément possède un text-align: justify.*/
+}
+/*Les propriétés CSS relatives au fond (background)*/
+{
+	background : ; /**/
+	background : ; /*La propriété background est une propriété raccourcie qui permet de définir le
+	fond où arrière plan d’un élément.*/
+	background-color: ; /*La propriété background-color permet de définir une couleur de fond pour un
+	élément.*/
+	background-image: ; /*La propriété background-image permet de définir une image de fond pour un
+	élément.*/
+	/*Indiquer l'url de l'image (notation absolue ou relative) background-image:url("images/fond.png"); */
+	background-attachment : ; /*fond fixé*/
+	/*
+	fixed : le fond reste fixe quand on descend plus bas sur la page 
+	scroll : le fond défile avec le texte (par défaut) 
+	*/
+	background-repeat : ; /*Répétition du fond*/
+	/*repeat : le fond se répète (par défaut)
+	repeat-x : le fond ne se répète que sur une ligne, horizontalement
+	repeat-y : le fond ne se répète que sur une colonne, verticalement
+	no-repeat : le fond ne se répète pas, il n'est affiché qu'une fois */
+	background-origin : ; /*La propriété background-origin permet de définir le point d’origine de l’image de
+	fond (qui peut être au niveau de la boite de contenu, de la boite de padding ou de la boite de bordure).*/
+	background-position : ; /*La propriété background-position permet de définir la position de l’image par
+	rapport à l’origine définie avec background-origin.*/
+	/*En notant une distance en px ou %, par rapport au coin en haut à gauche.
+	background-position:50px 200px;50 px à droite, 200px en bas
+	En utilisant des valeurs prédéfinies, une pour la verticale et une pour l'horizontale :
+	top : en haut, verticalement
+	center : au milieu, verticalement
+	bottom : en bas, verticalement 
+	
+	left : à gauche, horizontalement
+	center : au centre, horizontalement
+	right : à droite, horizontalement */
+	background-size : ; /*La propriété background-size permet de définir la taille des images de fond.*/
+	box-shadow : ; /*La propriété box-shadow permet de définir des ombres derrière (et autour) de
+	la boite d’un élément.*/
+}
+
+/*Propriétés CSS relatives à la taille des boîtes*/
+{
+	max-width  : ;/**/
+	width : ; /*La propriété width permet de spécifier explicitement la largeur du bloc*/
+	/*Valeur en px, %, ou encore "auto" (valeur par défaut, la largeur dépendra du texte à l'intérieur) */
+	min-width : ;/*La propriété min-width permet de spécifier la largeur minimale de la boîte d’un
+	élément.*/
+	max-width  : ;/*La propriété max-width permet de spécifier la largeur maximale de la boîte d’un
+	élément.*/
+
+	height  : ;/*La propriété width permet de spécifier explicitement la hauteur du bloc*/
+	min-height: ;/*La propriété min-width permet de spécifier la hauteur minimale de la boîte d’un
+	élément.*/
+	max-height: ;/*La propriété min-width permet de spécifier la hauteur minimale de la boîte d’un
+	élément.*/
+
+}
+
+
+/*Les propriétés CSS relatives aux marges*/
+{
+	padding :1x 2x 3x 4x ;/*La propriété padding-top permet de régler la taille de la marge intérieure {haute|droite|basse|gauche}
+	d’un élément.*/
+	padding-top: ;/*La propriété padding-top permet de régler la taille de la marge intérieure haute
+	d’un élément.*/
+	/*Indiquer une valeur comme 20px, 1.5em..*/
+	padding-right: ;/*La propriété padding-top permet de régler la taille de la marge intérieure droite
+	d’un élément.*/
+	padding-left: ;/*La propriété padding-top permet de régler la taille de la marge intérieure gauche
+	d’un élément.*/
+	padding-bottom: ;/*La propriété padding-top permet de régler la taille de la marge intérieure gauche
+	d’un élément.*/
+
+	margin :1x 2x 3x 4x ;/*La propriété padding-top permet de régler la taille de la marge extèrieur {haute|droite|basse|gauche}
+	d’un élément.*/
+	/*Indiquez de 1 à 4 valeurs à la suite. Selon le nombre de valeurs que vous mettez, la signification change :
+	1 valeur : ce sera la marge pour le haut, le bas, la gauche et la droite
+	2 valeurs : la première correspond à la marge pour le haut et le bas, la seconde pour la gauche et la droite
+	3 valeurs : la première correspond à la marge du haut, la seconde aux marges à gauche et à droite, la troisième à la marge du bas
+	4 valeurs : respectivement la marge du haut, de la droite, du bas, de la gauche.
+	Exemple : margin:20px 5px; 20px de marge en haut et en bas, 5px à gauche et à droite */
+	margin-top: ;/*La propriété padding-top permet de régler la taille de la marge extèrieur haute
+	d’un élément.*/
+	margin-right: ;/*La propriété padding-top permet de régler la taille de la marge extèrieur droite
+	d’un élément.*/
+	margin-left: ;/*La propriété padding-top permet de régler la taille de la marge extèrieur gauche
+	d’un élément.*/
+	margin-bottom: ;/*La propriété padding-top permet de régler la taille de la marge extèrieur gauche
+	d’un élément.*/
+
+
+
+}
+/*Les propriétés CSS relatives aux bordures*/
+{
+	border: ;/*La propriété border est une propriété raccourcie qui permet de définir les propriétés des bordures pour un élément.*/
+	border-width: ;/*La propriété border-width permet de définir la largeur des bordures d’un élément.*/
+	/*Indiquer une valeur en px. */
+	border-style: ;/*La propriété border-style permet de définir le style des bordures d’un élément 
+	(bordure solide, en pointillés, avec effet 3D, etc.).*/
+	/*none : pas de bordure (par défaut)
+	hidden : bordure cachée
+	solid : ligne pleine
+	double : ligne double (nécessite une taille de bordure de 3px minimum)
+	dashed : en tirets
+	dotted : en pointillés
+	inset : effet 3D "enfoncé"
+	outset : effet 3D "surélevé"
+	ridge : autre effet 3D*/
+	border-color: ;/*La propriété border-color permet de définir la couleur des bordures d’un élément.*/
+	border-top: ;/*La propriété border-top permet de définir les propriétés de la bordure haute d’un élément.*/
+	border-right: ;/*La propriété border-top permet de définir les propriétés de la bordure droite d’un élément.*/
+	border-left: ;/*La propriété border-top permet de définir les propriétés de la bordure gauche d’un élément.*/
+	/*Indiquer la couleur, l'épaisseur et le type de bordure pour la bordure gauche. L'ordre n'a pas d'importance.
+	Exemple : border-left: 2px inset blue; Bordure bleue de 2px avec effet 3D "enfoncé"*/
+	border-bottom: ;/*La propriété border-top permet de définir les propriétés de la bordure basse d’un élément.*/
+}
+
+/*L’affichage en CSS*/
+{
+	display: ; /*La propriété display permet de définir le type d’affichage utilisé pour le rendu
+	d’un élément. Le display d’un élément se compose d’un outer display et d’un
+	inner display. L’outer display (affichage extérieur) définit comment la boîte
+	participe au flux tandis que l’inner display (affichage intérieur) définit
+	l’organisation des éléments enfants*/
+	/*none : l'élément ne sera pas affiché
+	block : l'élément devient de type "block" (bloc, comme <p>)
+	inline : l'élément devient de type "inline" (en ligne, comme <strong>)
+	list-item : l'élément devient de type "élément de liste à puce" (comme <li>) */
+	visibility : ; /*Affichage*/
+	/*hidden : masqué
+	visible : visible (par défaut)
+	display:none; fait complètement disparaître l'élément, tandis que visibility:hidden; masque l'élément, qui continue quand même à
+	prendre de la place sur l'écran. */
+	overflow: ; /*Limiter les dimensions*/
+	/*visible : tout l'élément sera affiché (par défaut).
+	hidden : l'élément sera coupé s'il dépasse les limites définies par height et width. On ne pourra pas voir la partie du texte coupée.
+	scroll : tout comme hidden, l'élément sera coupé s'il dépasse les limites. Toutefois, cette fois le navigateur ajoutera des barres de
+	défilement pour qu'on puisse voir la suite du texte. 
+	auto : c'est le navigateur qui décide d'ajouter des barres de défilement ou pas en fonction des cas. Bien souvent, utiliser cette
+	valeur revient à utiliser la valeur "scroll".*/
+	/**/
+}
+
+/*Les propriétés CSS liées au positionnement
+Ces propriétés permettent de gérer le positionnement et la façon dont s’empilent les
+éléments.*/
+/*Les propriétés CSS liées aux flottants
+Ces propriétés permettent d’indiquer si un élément doit flotter pour s’aligner sur une
+boîte en ligne, une colonne, une région ou une page.
+*/
+{
+	float : ; /*Flottant*/
+	/*left : flottant à gauche
+	right : flottant à droite
+	none : pas de flottant (par défaut) */
+	clear : ; /*stopper un flottant*/
+	/*left : supprime l'effet d'un flottant à gauche précédent
+	right : supprime l'effet d'un flottant à droite précédent
+	both : supprime l'effet d'un flottant précédent, qu'il soit à gauche ou à droite
+	none : pas de suppression de l'effet du flottant (par défaut) */
+	position : ;/*La propriété position permet d’indiquer quel algorithme de positionnement doit être utilisé pour calculer 
+	la position d’une boîte.*/
+	/*absolute : position absolue par rapport au coin en haut à gauche
+	fixed : position fixe (fonctionne comme la position absolue). L'élément reste à sa position même quand on descend plus bas
+	dans la page.
+	relative : position relative, par rapport à la position "normale" de l'élément
+	static : positionnement normal (par défaut) */
+	top : ;/*La propriété top permet d’indiquer dans quelle mesure le bord de la marge
+	supérieure d’une boîte positionnée doit être décalé par rapport au bord
+	supérieur du bloc qui la contient. Le décalage est calculé différement en
+	fonction du type de positionnement.*/
+	/*Valeur en px, %, em... A utiliser pour un positionnement absolu, fixe ou relatif.*/
+	right : ;/*la même que top*/
+	left : ;/**/
+	bottom : ;/**/
+	z-index : ;/*La propriété z-index permet d’indiquer le niveau d’empilement d’un élément
+	positionné dans le contexte d’empilement courant et de déterminer si l’élément
+	doit établir un contexte d’empilement.*/
+	/*Par exemple en cas de positionnement absolu, si 2 éléments se chevauchent, z-index permet d'indiquer quel élément doit être
+	affiché au-dessus de l'autre. Indiquez un nombre. Plus ce nombre est élevé, plus l'élément sera affiché en avant.
+	Exemple, si vous avez 2 éléments positionnés en absolus avec un z-index : 10 pour l'un et z-index : 20 pour l'autre, c'est celui
+	qui a un z-index de 20 qui sera affiché par-dessus.*/
+}
+
+/*Type de lyste*/
+{
+	list-style-type : ; 
+	/*Pour les listes non ordonnées (<ul>) :
+	disc : un disque noir (par défaut).
+	circle : un cercle.
+	square : un carré. 
+	none : aucune puce ne sera utilisée.
+	Pour les listes ordonnées (<ol>) :
+	decimal : des nombres 1, 2, 3, 4, 5... (par défaut)
+	decimal-leading-zero : des nombres commençant par zéro (01, 02, 03, 04, 05...). Ne fonctionne pas sur Internet Explorer
+	upper-roman : numérotation romaine, en majuscules (I, II, III, IV, V...)
+	lower-roman : numérotation romaine, en minuscules (i, ii, iii, iv, v...)
+	upper-alpha : numérotation alphabétique, en majuscules (A, B, C, D, E...)
+	lower-alpha : numérotation alphabétique, en minuscules (a, b, c, d, e...) */
+	list-style-position : ;
+	/*
+	inside : sans retrait 
+	outside : avec retrait (par défaut) */
+	list-style-image : ;
+	/*Indiquer l'url de l'image qui servira de puce. 
+	Exemple : list-style-image: url("images/puce.png");*/
+
+}
+
+/*Autres propriétés*/
+{
+	a : link ;/*Les pseudoclasses d'ancre*/
+	/*a:link : lien non-visité
+	a:visited : lien visité
+	a:hover : lien survolé
+	a:active : lien activé*/
+	scrollbar : ; /*Les barres de défilements*/
+	/*scrollbar-3dlight-color : permet de modifier la couleur pour les effets de relief. Valeur possible : une couleur.
+	scrollbar-arrow-color : permet de modifier la couleur pour les pointeurs de défilement. Valeur possible : une couleur.
+	scrollbar-base-color : permet de modifier la couleur de la surface de la barre de défilement. Valeur possible : une couleur.
+	scrollbar-darkshadow-color : permet de modifier la couleur pour les ombres. Valeur possible : une couleur.
+	scrollbar-face-color : permet de modifier la couleur de la surface de la barre de défilement. Valeur possible : une couleur.
+	scrollbar-highlight-color : permet de modifier la couleur pour le bord haut et le bord gauche. Valeur possible : une couleur.
+	scrollbar-shadow-color : permet de modifier la couleur pour le bord droit et le bord du bas. Valeur possible : une couleur.
+	scrollbar-track-color : permet de modifier la couleur pour la barre de défilement non cachée par le pointeur de
+	défilement. Valeur possible : une couleur. */
+}
+
+/*BLOC Les propriétés liées à l’alignement des boîtes*/ 
+/*Ces propriétés CSS permettent de définir l’alignement des blocs dans leurs conteneurs
+selon les différents modèles de disposition de blocs CSS : disposition en blocs,
+disposition tableau, disposition flex et disposition grille. Les propriétés de ce module
+sont bien supportées et stables même si certaines sont toujours en « Working Draft »
+sur la spécification officielle.*/
+{
+	align-content: ; /**/
+	align-content: ; /*La propriété align-content permet d’aligner le contenu d’une boite élément par
+	rapport à la boite le long de l’axe secondaire / l’axe en colonne (axe de bloc).*/
+	/*
+	stretch
+	space-between
+	space-around
+	space-evenly
+	*/
+	justify-content: ; /*La propriété justify-content permet d’aligner le contenu d’une boite élément par
+	rapport à la boite le long de l’axe principal / l’axe en ligne.*/
+	/*
+	stretch
+	space-between
+	space-around
+	space-evenly
+	
+	*/
+	flex : flex start;
+	align-self: ; /*La propriété align-self permet d’aligner une boite au sein de son conteneur sur
+	l’axe secondaire ou axe en colonne.*/
+	justify-self: ; /*La propriété justify-self permet de définir comment une boite élément sera
+	alignée au sein de son conteneur sur l’axe principal ou axe en ligne.*/
+	align-items: ; /*La propriété align-items permet de définir la valeur de align-self pour l’ensemble
+	des éléments descendants directs.*/
+	justify-items: ; /*La propriété justify-items permet de définir la valeur de justify-self pour
+	l’ensemble des éléments descendants directs.*/
+	order: ; /*La propriété order contrôle l’ordre dans lequel les éléments flexibles
+	apparaissent dans le conteneur flex.*/
+}
+
+/*Les propriétés CSS liées au modèle des boites flexibles ou flexbox*/
+/*Ces propriétés définissent un modèle de boîte CSS optimisé pour la conception
+d’interface utilisateur. Dans le modèle de disposition flex, les enfants d’un conteneur
+flex peuvent être disposés dans n’importe quelle direction et possèdent une taille
+flexible : ils peuvent grandir pour remplir l’espace inutilisé ou se rétrécir pour éviter de
+déborder de leur parent.
+*/
+{
+	flex-grow : ; /*La propriété flex-grow définit la capacité d’une élément flexible à s’étendre pour occuper l’espace disponible.*/
+	flex-shrink : ; /*La propriété flex-shrink définit la capacité d’une élément flexible à rétrécir pour ne pas déborder de son conteneur.*/
+	flex-basis : ; /*La propriété flex-basis détermine la taille de base d’un élément flexible avant  que tout espace soit redistribué.*/
+	flex : ; /*La propriété flex est une propriété raccourcie qui permet de définir les valeurs pour flex-grow, flex-shrink et flex-basis.*/
+	flex-direction : ; /*La propriété flex-direction permet de définir la direction de l’axe principal du conteneur flex, 
+	déterminant ainsi la direction selon laquelle les éléments flexibles sont disposés.*/
+	/* Valeurs de base */
+	flex: auto;
+	flex: initial;
+	flex: none;
+
+	/* Une valeur sans unité pour flex-grow */
+	/* flex-basis vaut alors 0 */
+	flex: 2;
+
+	/* Une valeur, largeur/hauteur: flex-basis */
+	flex: 10em;
+	flex: 30px;
+	flex: content;
+
+	/* Deux valeurs : flex-grow | flex-basis */
+	flex: 1 30px;
+
+	/* Deux valeurs : flex-grow | flex-shrink */
+	/* flex-basis vaut alors 0 */
+	flex: 2 2;
+
+	/* Trois valeurs : flex-grow | flex-shrink | flex-basis */
+	flex: 2 2 10%;
+
+	/* Valeurs globales */
+	flex: inherit;
+	flex: initial;
+	flex: unset;
+}
+
+/*Les propriétés CSS liées au modèle des grilles*/
+/*Ces propriétés permettent de définir un système de présentation bidimensionnel basé
+sur une grille. Dans le modèle de présentation en grille, les enfants d’un conteneur de
+grille peuvent être positionnés dans des emplacements arbitraires d’une grille de
+présentation prédéfinie flexible ou de taille fixe.
+*/
+{
+	grid-template-columns : ; /*La propriété grid-template-columns spécifie la liste des pistes (nom et taille)
+	pour les colonnes de la grille.*/
+	grid-template-rows: ; /*La propriété grid-template-rows spécifie la liste des pistes (nom et taille) pour
+	les lignes de la grille.*/
+	grid-template-areas : ; /*La propriété grid-template-areas permet de définir des zones de grille
+	nommées.
+	*/
+}
+
+
+/*Les propriétés CSS relatives au débordement*/
+{
+	overflow-x : ; /**/
+	overflow-x : ; /*La propriété overflow-x permet de définir la façon dont on souhaite gérer les
+	débordements dans la direction horizontale.*/
+	overflow-y : ; /*La propriété overflow-x permet de définir la façon dont on souhaite gérer les
+	débordements dans la direction verticale.*/
+	text-overflow : ; /*La propriété text-overflow spécifie le rendu lorsque le contenu en ligne déborde
+	de son bord de boîte de fin de ligne dans la direction de progression en ligne
+	de son élément conteneur (« le bloc ») dont overflow est autre que visible.*/
+}
+
+
+
+/*Les propriétés CSS relatives aux barres de défilement*/
+{
+	scroll-snap-type  : ; /*La propriété scroll-snap-type permet de définir si un conteneur avec barre de
+	défilement doit posséder des points d’accroche, l’axe de ces points d’accorche et leur degré d’adhérence.*/
+	scroll-padding-top  : ; /*La propriété scroll-padding-top permet de définir un décalage sur le bord
+	supérieur par rapport à la zone de défilement ou « scrollport » de l’élément.*/
+	scroll-padding-right   : ; /**/
+	scroll-padding-left   : ; /**/
+	scroll-padding-bottom   : ; /**/
+	scrollbar-color: ; /*La propriété scrollbar-color permet de définir les couleurs des barres de
+	défilement d’un élément.*/
+	scrollbar-width : ; /*La propriété scrollbar-width permet de définir l’épaisseur maximale des barres
+	de défilement d’un élément lorsqu’elles sont affichées*/
+}
+/*Les propriétés CSS relatives à la couleur et à l’ajustement
+automatique des couleurs*/
+{
+	color :  ; /**/
+	color :  ; /*La propriété color permet de définir la couleur des textes.*/
+	opacity :  ; /*La propriété opacity permet de définir le niveau d’opacité (et donc de
+	transparence) d’un élément.*/
+}
+
+/*Les propriétés CSS inclassables*/
+{
+	all:  ; /*La propriété all permet de réinitialiser toutes les propriétés, à l’exception
+	de unicode-bidi et direction, avec leurs valeurs initiales, héritées ou qui proviennent d’une autre feuille de style.*/
+	contain:  ; /*La propriété contain permet d’indiquer qu’un élément, ainsi que son contenu,
+	sont, autant que possible, indépendants du reste de l’arbre du document*/
+	content:  ; /*La propriété content détermine ce qui est rendu à l’intérieur d’un élément ou
+	d’un pseudo-élément.*/
+	all:  ; /**/
+}
+
+/**/
+{}
+
+
+
+
+/*BLOC*/
+/* Alignement « géométrique » */
+justify-content: center; /* Éléments groupés au centre */
+justify-content: start; /* Éléments groupés au début */
+justify-content: end; /* Éléments groupés à la fin */
+justify-content: flex-start; /* Éléments flexibles groupés au début */
+justify-content: flex-end; /* Éléments flexibles groupés à la fin */
+justify-content: left; /* Éléments groupés à gauche */
+justify-content: right; /* Éléments groupés à droite */
+
+/* Alignement par rapport à la ligne de base */
+/* justify-content ne prend pas de valeurs relatives à la ligne de base */
+
+/* Alignement normal */
+justify-content: normal;
+
+/* Alignement distribué */
+justify-content: space-between; /* Les éléments sont répartis équitablement
+                                   Le bord du premier est aligné sur le
+                                   début du conteneur et la fin du dernier
+                                   est alignée sur la fin du conteneur */
+justify-content: space-around; /* Les éléments sont répartis équitablement
+                                   À chaque extrémité, entre le bord du
+                                   conteneur et le premier/dernier élément
+                                   on a la moitié de l'espace appliqué entre
+                                   chaque élément */
+justify-content: space-evenly; /* Les éléments sont répartis équitablement
+                                   Tous les éléments sont séparés par le même
+                                   espace */
+justify-content: stretch; /* Les éléments sont répartis équitablement et
+                                   les éléments dimensionnés avec 'auto' sont
+                                   étirés afin de remplir le conteneur */
+
+/* Alignement pour le dépassement */
+justify-content: safe center;
+justify-content: unsafe center;
+
+/* Valeurs globales */
+justify-content: inherit;
+justify-content: initial;
+justify-content: unset;
+/*************************/
+
+/* Alignement le long de l'axe */
+/* Note : align-content ne prend pas en charge les valeurs left et right */
+align-content: center; /* Les éléments sont groupés au centre */
+align-content: start; /* Les éléments sont groupés au début  */
+align-content: end; /* Les éléments sont groupés à la fin */
+align-content: flex-start; /* Les éléments flexibles sont groupés au début */
+align-content: flex-end; /* Les éléments flexibles sont groupés à la fin */
+
+/* Alignement normal */
+align-content: normal;
+
+/* Alignement sur la ligne de base */
+align-content: baseline;
+align-content: first baseline;
+align-content: last baseline;
+
+/* Répartition de l'espace */
+align-content: space-between; /* L'espace est réparti entre
+                                 les éléments, le premier est
+                                 accolé au bord et le dernier
+                                 également. */
+align-content: space-around; /* L'espace est réparti entre les
+                                 éléments avec un demi-espace
+                                 au début et à la fin */
+align-content: space-evenly; /* L'espace est réparti entre les
+                                 éléments et autour */
+align-content: stretch; /* Les éléments dimensionnés avec
+                                 auto sont étirés également
+                                 afin de remplir le conteneur*/
+
+/* Gestion du dépassement */
+align-content: safe center;
+align-content: unsafe center;
+
+/* Valeurs globales */
+align-content: inherit;
+align-content: initial;
+align-content: unset;
+/*************************/
+
+justify-items: auto;
+justify-items: normal;
+justify-items: stretch;
+
+/* Alignement par rapport à l'axe */
+justify-items: center; /* Les éléments sont regroupés au centre */
+justify-items: start; /* Les éléments sont regroupés au début  */
+justify-items: end; /* Les éléments sont regroupés à la fin  */
+justify-items: flex-start; /* Les éléments sont regroupés au début de l'axe */
+justify-items: flex-end; /* Les éléments sont regroupés à la fin de l'axe */
+justify-items: self-start;
+justify-items: self-end;
+justify-items: left; /* Les éléments sont regroupés à gauche */
+justify-items: right; /* Les éléments sont regroupés à droite */
+
+/* Alignement par rapport à la ligne de base */
+justify-items: baseline;
+justify-items: first baseline;
+justify-items: last baseline;
+
+/* Gestion du dépassement */
+justify-items: safe center;
+justify-items: unsafe center;
+
+/* Valeurs historiques */
+justify-items: legacy right;
+justify-items: legacy left;
+justify-items: legacy center;
+
+/* Valeurs globales */
+justify-items: inherit;
+justify-items: initial;
+justify-items: unset;

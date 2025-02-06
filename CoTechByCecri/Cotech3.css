@@ -1,0 +1,926 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .jersey-10-regular {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .delius-regular {
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+header{
+    background-image: url("Images/vr-7499157_1920_Image\ Enhancer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /*
+    background-image: linear-gradient(to bottom, rgb(255, 217, 0), rgba(187, 1, 162, 0.966) ,rgba(12, 0, 187, 0.603));
+    */
+    background-image: linear-gradient(to bottom, rgb(191, 66, 158),rgb(29,9,71));
+
+}
+
+/*Barre de Navigation*/
+.BarreDeNavigation{
+    width: 100%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    position: fixed;
+    z-index: 6;
+
+}
+.TexteHeader{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 333px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.ObjetDeNavigationBloc1{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    
+    
+}
+
+.ObjetDeNavigationBloc1 > a {
+    text-decoration: none;
+    font-size: 6em;
+    color: beige;
+    text-align: center;
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: 200%;
+}
+.ObjetDeNavigationBloc1 > a:hover {
+    text-decoration: none;
+    color: rgb(241, 24, 213);
+}
+
+
+.ObjetDeNavigationBloc2{
+    width: 100%;
+    background-color: #bf429e;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ObjetDeNavigationBloc2Box1{
+    width: 70%;
+}
+.ObjetDeNavigationBloc2Box2{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 10px 20px 400px 10px whitesmoke;
+}
+
+
+.ObjetDeNavigationBloc2Box2 .LienDeNavigation a{
+    color: #ffffff;
+    margin-right:30px ;
+    font-size: 1.6em;
+}
+
+.LienDeNavigation > a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Delius", serif;
+    font-size: 1.3em;
+    font-weight: 800; 
+    
+}
+
+.LienDeNavigation a:hover { /*modifie le comportement de mes elments de la barre quand la souris est au dessus d'un élément*/
+    color: rgba(255, 255, 255, 0.897);
+  }
+
+/*Texte sous le titre*/
+.ZoneDeTexteSousleTitre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    margin-top: 2%;
+    
+}
+
+.ZoneDeTexteSousleTitreBox1{
+    width: 40%;
+}
+
+.ZoneDeTexteSousleTitreBox1 > p{ /*paragraphe sous le titre*/
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0px 50px 0px 50px;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+
+}
+
+.ZoneDeTexteSousleTitreBox2{
+    width: 50%;
+}
+
+.BoutonEnSavoirPlus{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.BoutonEnSavoirPlusBox1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.BoutonEnSavoirPlusBox1 > button{
+    color: rgba(255, 255, 255, 0.897);
+    background-color: rgba(76, 108, 253, 0.897);
+    padding: 20px;
+    border-radius: 40%;
+    border: none;
+}
+*/
+/*
+.BoutonEnSavoirPlusBox1 > button > a {
+    font-family: "Delius", serif;
+    font-size: 1.8em;
+    color: rgba(255, 255, 255, 0.897);
+    border: none;
+    text-decoration: none;
+}
+
+*/
+
+/*Je crée le bouton et je le place*/
+.BoutonEnSavoirPlusBox1 > a {
+    position: absolute;
+    top: 65%;
+    Left :14.7%;
+    color: rgb(255, 255, 255);
+    padding: 30px 60px;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration:none;
+    box-shadow: 0 20px 50px rgba(255, 62, 168, 0.5);
+    overflow: hidden; /*pour mettre l'animation dans le bouton*/
+    font-family: "Varela Round", serif;
+    font-weight: 800;
+    font-style:unset;
+    letter-spacing: .4rem;
+    margin-top: 6%;
+}
+
+.BoutonEnSavoirPlusBox1> a::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(4, 0, 255, 0.060);
+}
+
+.ul .li {
+    display: inline-block;
+    position: relative;
+    
+}
+
+.ul > .li > .lienglissant {
+    display: block;
+    color: antiquewhite;
+    margin-top: 50px ; /*Gerer la taille des espaces*/
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.3em;
+  
+}
+
+.Dropdown {
+    display: block;
+
+}
+
+.ul > .Dropdown{
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 9;
+    display: none;
+}
+.ul:hover > .Dropdown{
+    top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.boutonenbas{
+    position: absolute;
+    color: rgb(241, 24, 213);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    padding-left: 6px;
+    top: 2.75%;
+    
+}
+.boutonenbas:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/*j'initialise la transition sur le bouton & les contours */
+.BoutonEnSavoirPlusBox1> a .span1:nth-child(1){ /*rgb(196, 3, 109),rgb(0, 4, 247)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate1 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate1 { /*je determine animate*/
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span2:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate2 1s linear infinite;
+}
+@keyframes animate2 { /*je determine animate*/
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span3:nth-child(3){
+    position:absolute;
+    top: 97.5%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate3 1s linear infinite;
+}
+@keyframes animate3 { /*je determine animate*/
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span4:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate4 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4 { /*je determine animate*/
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.BoutonEnSavoirPlusBox2{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.NosServices{
+    margin: 0;
+    padding: 0;
+}
+/* CSS POur container box de 2 en dessous*/
+/**GRANDE BOX 2**/
+.GrandeBox1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:  100% ;
+    height: 500px;
+    /*background-color: #27e971;*/
+    margin-top: 20%;
+    margin-bottom: 1%;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #e9c527;*/
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 10px 30px 200px 30px #711769;
+}
+.Sous1Box1{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #8abea1;*/
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+    
+}
+.Sous1Box1>h1 {
+    padding-bottom: 15%;
+}
+.Sous1Box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #2fc070;*/
+    margin-top: 1%;
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+}
+/*
+.Sous1Box2:hover{
+    width: 50%;
+}
+*/
+.box2{ /*****/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ; /*pour ajuster la photo dans la box*/
+    height: 90%;
+  
+    background-image: url("Images/10.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+   
+    background-size:cover;
+    border-radius: 8px;
+    
+}
+.box2:hover{
+    box-shadow: 10px 10px 80px 30px #711769;
+    border: solid 2px #bf429e;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+.box2 > img {
+    width: 100%;
+    border: 2px solid rgb(255, 255, 255);
+}
+.box2 > img:hover {
+    width: 100%;
+    box-shadow: 10px 10px 80px 30px #711769;
+}
+
+
+/**GRANDE BOX 2**/
+.GrandeBox2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:  100% ;
+    height: 500px;
+    /*background-color: #27e971;*/
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.Deuxbox1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #e9c527;*/
+    flex-direction: column;
+    box-shadow: 10px 30px 200px 30px #711769;
+}
+.DeuxSous1Box1{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #8abea1;*/
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+    
+}
+/*
+.DeuxSous1Box2:hover{
+    width: 50%;
+}
+    */
+.DeuxSous1Box1>h1 {
+    padding-bottom: 15%;
+}
+.DeuxSous1Box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #2fc070;*/
+    margin-top: 1%;
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+.Deuxbox2{ /*****/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ; /*pour ajuster la photo dans la box*/
+    height: 90%;
+    
+    background-image: url("Images/8.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    border-radius: 8px;
+    /*border: solid 2px white;*/
+}
+
+.Deuxbox2:hover{
+    box-shadow: 10px 10px 80px 30px #711769;
+    border: solid 2px #bf429e;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.Deuxbox2 > img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    height: auto;
+}
+.Deuxbox2 > img:hover {
+    width: 100%;
+    box-shadow: 10px 10px 80px 30px rgba(255, 62, 168, 0.5);
+}*/
+
+
+.Sous1Box1 svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.DeuxSous1Box1 svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Appartition au defilement*/
+
+[class*="reveler-"]{ /*je le demande de choisir toutes les classes qui contien reveler- */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.reveler-Visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0.1, 0, .99);
+}
+
+/*Temps d'attente sur chaque bloc que je veux afficher*/
+.reveler-1{
+    transition-delay: .2s;
+}
+.reveler-2{
+    transition-delay: .4s;
+}
+.reveler-3{
+    transition-delay: .6s;
+}
+.reveler-4{
+    transition-delay: .8s;
+}
+.reveler-5{
+    transition-delay: 1s;
+}
+.reveler-6{
+    transition-delay: 1.2s;
+}
+.reveler-7{
+    transition-delay: .2s;
+}
+.reveler-8{
+    transition-delay: .4s;
+}
+.reveler-9{
+    transition-delay: .8s;
+}
+.reveler-10{
+    transition-delay: .8s;
+}
+
+/*LIen entre les deux box principales*/
+
+.lienentrelesdeux{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.re_espacerlelienentrelesdeux{
+    width: 93.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lienentrelesdeux > .re_espacerlelienentrelesdeux > svg{
+    color: aliceblue;
+    height: 70px;
+}
+
+.tiret1{
+    width: 50%;
+    border: solid 2px whitesmoke;
+}
+.tiret2{
+
+    width: 50%;
+    border: solid 2px whitesmoke;
+
+}
+
+/*Container Avec 4 BOX*/
+
+.GrandeBox3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:  100% ;
+    height: 600px;
+    background-color:transparent;
+    box-shadow: 15px 10px 80px 10px #45105b;
+}
+
+[class*="box3_"]{ /*Je demande à toutes les classes qui s'appellent box"_ auelaue chose d'avoir le paramètre ci dessous*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 80%;
+    flex-direction: column;
+
+}
+/*
+.box3_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 80%;
+    box-shadow: 15px 10px 20px 10px rgba(204, 0, 255, 0.5);
+}
+*/
+
+/*BOX1*/
+.SousBox3_1_1{ /*IMAGE*/
+    width: 100%;
+    height: 230px;
+    background-image: url(Images/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+
+
+}
+.SousBox3_1_1:hover{ /*IMAGE hover*/
+    width: 100%;
+    background-size:130%;
+}
+.SousBox3_1_0{ /*Titre H2*/
+    color: whitesmoke;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.SousBox3_1_2{ /*TExte*/
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    margin: 3%;
+}
+/*BOX2*/
+.SousBox3_2_1{ /*IMAGE*/
+    width: 100%;
+    height: 230px;
+    background-image: url(Images/9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;  
+}
+.SousBox3_2_1:hover{ /*IMAGE hover*/
+    width: 100%;
+    background-size:130%;
+}
+.SousBox3_2_0{ /*TITRE H2*/
+    width: 100%;
+    color: whitesmoke;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.SousBox3_2_2{ /*TExte*/
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    margin: 3%;
+}
+/*BOX3*/
+.SousBox3_3_1{ /*IMAGE*/
+    width: 100%;
+    height: 230px;
+    background-image: url(Images/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;  
+}
+.SousBox3_3_1:hover{ /*IMAGE hover*/
+    width: 100%;
+    background-size:130%;
+}
+.SousBox3_3_0{ /*TITRE H2*/
+    width: 100%;
+    color: whitesmoke;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.SousBox3_3_2{ /*TExte*/
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    margin: 3%;
+}
+/*BOX4*/
+.SousBox3_4_1{ /*IMAGE*/
+    width: 100%;
+    height: 230px;
+    background-image: url(Images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;  
+}
+.SousBox3_4_1:hover{ /*IMAGE hover*/
+    width: 100%;
+    background-size:130%;
+}
+.SousBox3_4_0{ /*TITRE H2*/
+    width: 100%;
+    color: whitesmoke;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.SousBox3_4_2{ /*TExte*/
+    color: aliceblue;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+    margin: 3%;
+}
+
+            /*Footer*/
+
+footer{
+    color: antiquewhite;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+.AproposDeNous p{
+    color: antiquewhite;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.AproposDeNous > p{
+    color: rgb(255, 255, 255);
+    font-family: "Varela Round", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.3em;
+    box-shadow: 15px 10px 80px 10px #45105b;
+    letter-spacing: 2px;
+    
+}
+.FinDePage{
+    width: 100%;
+    height: 333px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 15px 10px 80px 10px #45105b;
+}
+
+.LocalisationGoogle{
+    width: 45%;
+    display: flex;
+}
+
+.LocalisationGoogle  > iframe {
+    width: 100%;
+    height: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.NosMailsEtNuméros{
+    width: 45%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    color: antiquewhite;
+
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+}
+
+.Partenaires:hover{
+    color: rgb(241, 24, 213);
+}
+.numero:hover{
+    color: rgb(241, 24, 213);
+}
+.mails:hover{
+    color: rgb(241, 24, 213);
+}
+.reseaux_sociaux:hover{
+    color: rgb(241, 24, 213);
+}
+
+
+.NosMailsEtNuméros h3 {
+    margin-bottom: 25px;
+}

@@ -1,0 +1,1254 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Body*/
+
+body{
+    margin: 0;
+    padding: 0;
+    /*
+    background-image: linear-gradient(to bottom, rgb(255, 217, 0), rgba(187, 1, 162, 0.966) ,rgba(12, 0, 187, 0.603));
+    */
+    background-image: linear-gradient(to bottom, rgb(191, 66, 158),rgb(29,9,71));
+}
+
+/*Navbar*/
+
+nav{
+    width: 100%;
+    background-color: #bf429e;
+    height: 60px;
+    /*position: fixed;*/
+    z-index: 100;
+}
+
+/*Bloc Navbar*/
+.ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.li{
+    margin: 0px 40px 0px 40px;
+    font-size: 1.5em;
+}
+
+
+.li, a{
+    list-style: none;
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(11, 0, 164);
+    text-decoration: underline;
+    
+}
+
+/*Menu deroulant Invisible Au grand Ecran*/
+.burgerMenuButton{
+color: #fff;
+font-size: 1.5rem;
+cursor: pointer;
+display: none;
+}
+
+/*Menu deroulant Invisible*/
+.burgerMenuButtonCACHE{
+    display: none;
+    position: absolute;
+    width:100%;
+    background-image: linear-gradient(to bottom, #bf429e,rgba(29, 9, 71, 0.77));
+    z-index: 10;
+    height: 0;
+    right: -0%;
+    top: 60px;
+    border: none;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.burgerMenuButtonCACHE.Open{ /*Pour la fonction JAVASCRIPT qui permet au menu de s'afficher*/
+    height: 200px ;
+}
+.UlBurger{
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 30%;
+}
+.UlBurger > .li > a{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+.UlBurger > .li > a:hover{
+    color: rgb(191, 45, 224);
+    text-decoration: underline;
+    transition: 1s;
+    font-size: 1.0em;
+    font-weight: 800;
+}
+
+
+/*Photo En Background*/
+
+.PhotoBackground{
+    width: 100%;
+    height: 1050px;
+    background-image: url('Images/vr-7499157_1920_Image\ Enhancer.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Bloc du Titre et du texte*/
+.TitreSociete{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*Titre*/
+.h1{
+    /*margin: 10% 0% 2% 8%;*/
+    text-decoration: none;
+    font-size: 6em;
+    color: beige;
+    text-align: center;
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: 200%;
+
+    position: absolute;
+    left: 8%;
+    top: 14%;
+}
+
+/*Texte en dessous*/
+.h2{
+    width: 30%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /*margin: 2% 0 0% 5%;*/
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+
+    position: absolute;
+    left: 10%;
+    top: 38%;
+}
+
+
+/*BoutonEnSavoirPLus*/
+
+.BoutonEnSavoirPlus{
+    width: 100%;
+    height: 400px;  
+    position: absolute;
+    top: 60%;
+
+
+}
+
+.BoutonEnSavoirPlusBox1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    overflow: hidden;
+}
+
+.BoutonEnSavoirPlusBox1 > a {
+    position: absolute;
+    margin-top: 10%;
+    Left :14.7%;
+    color: rgb(255, 255, 255);
+    padding: 30px 60px;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration:none;
+    box-shadow: 0 20px 50px rgba(255, 62, 168, 0.5);
+    overflow: hidden; /*pour mettre l'animation dans le bouton*/
+    font-family: "Varela Round", serif;
+    font-weight: 800;
+    font-style:unset;
+    letter-spacing: .4rem;
+
+    /*width: 10%;*/
+}
+
+.BoutonEnSavoirPlusBox1> a::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(4, 0, 255, 0.060);
+}
+
+/*debut*/
+
+/*Création duc container 1 et de ses box enfant*/
+.Containeur1 > .SousContainer{
+    margin-top: 4%;
+    width: 100%;
+    height: 1100px ;
+    display: grid;
+    grid-template-columns: 50% 50% ; /*Je lui demande de me faire deux ligne de 50%*/
+    grid-template-rows: 50% 50%;
+    overflow: hidden;
+    justify-content: center;
+    justify-items: center;
+
+    
+}
+
+[class*="bloc_"]{
+    width: 90%;
+    height: 500px;
+    background-color: #ffc7ed40;
+    box-shadow: 10px 10px 8000px 30px #711769;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bloc_2{
+    background-image: url("Images/10.jpg");
+}
+.bloc_3{
+    background-image: url("Images/8.png");
+}
+.bloc_4{
+    grid-column: 2 / span 1;
+}
+.bloc_3{
+    grid-row: 2 / span 1;
+}
+
+.DeuxSous1Box1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width:  90% ;
+    height: 90%;
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+ 
+}
+.Sous1Box1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width:  90% ;
+    height: 90%;
+
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+ 
+}
+
+/*Liens entre les deux principaux containers*/
+
+.lienentrelesdeux{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.re_espacerlelienentrelesdeux{
+    width: 95.0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lienentrelesdeux > .re_espacerlelienentrelesdeux > svg{
+    color: aliceblue;
+    height: 70px;
+}
+
+.tiret1{
+    width: 50%;
+    border: solid 2px whitesmoke;
+}
+.tiret2{
+
+    width: 50%;
+    border: solid 2px whitesmoke;
+
+}
+
+/*Création containeur Principal 2*/
+
+.Containeur2 > .SousContainer2{
+    /*margin-top: 4%;*/
+    width: 100%;
+    height: 1200px ;
+    display: grid;
+    grid-template-columns: 15.3% 15.3% 15.3% 15.3% 15.3% 15.3% ; /*Je lui demande de me faire deux ligne de 50%*/
+    grid-template-rows: 50% 50%;
+    overflow: hidden;
+    justify-content: space-around;
+    justify-items: center;
+
+    column-gap: 10px;
+}
+
+[class*="bloc2_"]{
+    width: 100%;
+    height: 520px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.bloc2_1{ /*IMAGE*/
+    width: 90%;
+    height: 520px;
+    background-image: url(Images/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: grid;
+    /*border-radius: 5%;*/
+    grid-column: 1 / span 3;
+    grid-row: 1 ;
+
+    column-gap: 50px;
+}
+
+.bloc2_2{ /*IMAGE*/
+    width: 90%;
+    height: 520px;
+    background-image: url(Images/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: grid;
+
+    grid-column: 1 / span 3;
+    grid-row: 2;
+}
+.bloc2_3{ /*IMAGE*/
+    width: 90%;
+    height: 520px;
+    background-image: url(Images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: grid;
+
+    grid-column: 4 / span 3;
+    grid-row: 1;
+}
+.bloc2_4{ /*IMAGE*/
+    width: 90%;
+    height: 520px;
+    background-image: url(Images/9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    display: grid;
+
+    grid-column: 4 / span 3;
+    grid-row: 2;
+}
+.bloc2_5{ /*Texte*/
+    width: 90%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    /*border-radius: 5%;*/
+    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+
+    /*grid-column: 3 / span 1;
+    grid-row: 1;*/
+
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    
+    background-color: #b4298e89;
+       
+}
+.bloc2_6{ /*Texte*/
+    width: 90%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+
+    /*grid-column: 6 / span 1;
+    grid-row: 1;*/
+    grid-column: 4 / span 3;
+    grid-row: 1;
+    
+    background-color: #6a29b489;
+    z-index: 2;
+       
+}
+.bloc2_7{ /*Texte*/
+    width: 90%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+
+    /*grid-column: 1 / span 1;
+    grid-row: 2;*/
+
+    grid-column: 1 / span 3;
+    grid-row:2;
+
+    background-color: #b4298e89;
+    z-index: 2;
+}
+.bloc2_8{ /*Texte*/
+    width: 90%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+    color: aliceblue;
+    text-align: center;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+
+    /*grid-column: 4 / span 1;
+    grid-row: 2;*/
+
+    grid-column: 4 / span 3;
+    grid-row: 2;
+
+    background-color: #6a29b489;
+    z-index: 2;
+}
+
+
+.bloc2_5 > p {
+    color: rgb(255, 255, 255);
+    margin: 60px;
+}
+.bloc2_6 > p {
+    color: rgb(255, 255, 255);
+    margin: 60px;
+}
+.bloc2_7 > p {
+    color: rgb(255, 255, 255);
+    margin: 60px;
+}
+.bloc2_8 > p {
+    color: rgb(255, 255, 255);
+    margin: 60px;
+}
+/*HOVER*/
+
+
+.bloc2_5:hover{ /*Texte*/
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    background-color: rgba(180, 41, 143, 0.666);
+}
+.bloc2_6:hover{ /*Texte*/
+    grid-column: 4 / span 3;
+    grid-row: 1;
+    background-color: rgba(106,41,180, 0.666);
+}
+.bloc2_7:hover{ /*Texte*/
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    background-color: rgba(180, 41, 143, 0.666);
+}
+.bloc2_8:hover{ /*Texte*/
+    grid-column: 4 / span 3;
+    grid-row: 2;
+    background-color: rgba(106,41,180, 0.666);
+}
+
+
+/*Footer*/
+
+.LocalisationGoogle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LocalisationGoogle  > iframe {
+    width: 95%;
+    height: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Separation2{
+    width: 100.0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0% 6% 0%;
+}
+
+.tiret3{
+    width: 95%;
+    border: dashed 2px rgba(128, 132, 255, 0.708);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Fin de page*/
+
+.FinDePage{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 10px 80px 10px #45105b;
+}
+
+.NosMailsEtNuméros{
+    width: 66%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    color: antiquewhite;
+
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0em;
+}
+
+.NosMailsEtNuméros h3 {
+    margin-bottom: 25px;
+    
+}
+
+.Partenaires:hover{
+    color: rgb(241, 24, 213);
+}
+.numero:hover{
+    color: rgb(241, 24, 213);
+}
+.mails:hover{
+    color: rgb(241, 24, 213);
+}
+.reseaux_sociaux:hover{
+    color: rgb(241, 24, 213);
+}
+
+/*fin*/
+
+.reveler-1{
+    transition-delay: .2s;
+}
+.reveler-2{
+    transition-delay: .4s;
+}
+.reveler-3{
+    transition-delay: .6s;
+}
+.reveler-4{
+    transition-delay: .8s;
+}
+.reveler-5{
+    transition-delay: 1s;
+}
+.reveler-6{
+    transition-delay: 1.2s;
+}
+.reveler-7{
+    transition-delay: .2s;
+}
+.reveler-8{
+    transition-delay: .4s;
+}
+.reveler-9{
+    transition-delay: .8s;
+}
+.reveler-10{
+    transition-delay: .8s;
+}
+
+
+
+
+/*Animation*/
+
+@keyframes apparaitre{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.ApparaitreAuDefilement{
+    animation: apparaitre linear;
+    animation-timeline: view();
+    animation-range: entry 5%;
+}
+
+
+/*Modale*/
+
+.modal-btn{
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+.li > .modal-btn{
+    margin: 0px 40px 0px 40px;
+    font-size: 1.0em;
+
+}
+
+.li > .modal-btn > a{
+    list-style: none;
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.li > .modal-btn > a:hover{
+    text-decoration: none;
+    color: rgb(11, 0, 164);
+    text-decoration: underline;
+    
+}
+
+.modal-Container{ 
+    z-index: -3;
+    width: 100vh;
+    display: none;
+}
+.modal-Container.active{ 
+    z-index: -3;
+    width: 100vh;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 106%;
+    background-color: #000000e7;
+    z-index: 2;
+    
+}
+
+.contenuDeLaModal{
+    position: absolute;
+    width: 80%;
+    max-width: 500px;
+    height: 25vh;
+    padding: 30px;
+    min-width: 280px;
+    min-height: 50%;
+    background-color: rgba(255, 214, 100, 0.437);
+    border-radius: 5px;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: 200%;
+    font-size: 1.3em;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*Bouton pour fermer le modal*/
+
+.fermer-modal{
+    border: none;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-size: 1.0em; 
+    position: absolute;
+    top : 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #bf429e;
+    color: rgb(255, 255, 255);
+}
+
+
+/*j'initialise la transition sur le bouton & les contours DU BOUTON */
+.BoutonEnSavoirPlusBox1> a .span1:nth-child(1){ /*rgb(196, 3, 109),rgb(0, 4, 247)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate1 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate1 { /*je determine animate*/
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span2:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate2 1s linear infinite;
+}
+@keyframes animate2 { /*je determine animate*/
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span3:nth-child(3){
+    position:absolute;
+    top: 97.5%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate3 1s linear infinite;
+}
+@keyframes animate3 { /*je determine animate*/
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.BoutonEnSavoirPlusBox1> a .span4:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(126, 2, 70, 0.500),rgb(255, 15, 155));
+    animation: animate4 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4 { /*je determine animate*/
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 935px ) { /*Pour tous les écrans allant de 0 à 935px*/
+
+    .PhotoBackground{
+        width: 100%;
+        height: 932px;
+    }
+
+    .BoutonEnSavoirPlus{
+        width: 50%;
+        height: 50px;  
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .BoutonEnSavoirPlusBox1 > a { /*Pour centrer le bouton en position absolute*/
+        position: absolute;
+        margin-top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 20px 30px;
+        font-size: 1.1em;
+
+    }
+
+
+    .Navbar .li{
+        display: none;
+    }
+   .Navbar .burgerMenuButton{
+        display: block;
+        font-size: 2em;
+        margin-right: 2%;
+        }
+   .burgerMenuButtonCACHE{
+            display: block;
+        }
+    .h1{
+        font-size: 3em;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        margin-left: 3%;
+        padding: 120px;
+    }
+    .h2{
+        display: none;
+    }
+
+    /*Container 1*/
+
+    .Containeur1{
+        margin-top: 4%;
+        width: 100%;
+        height: 2200px ;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .Containeur1 >.SousContainer{
+        width: 100%;
+        height: 2400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    [class*="bloc_"]{
+        margin-bottom: 4%;
+        width: 90%;
+        height: 600px;
+    }
+
+    /*Container2*/
+
+    .Containeur2 > .SousContainer2{
+        /*margin-top: 4%;*/
+        width: 100%;
+        height: 2200px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    /*Dislabe les box grid qui servent à rien*/
+    .bloc2_9{
+        display: none;
+    }
+    .bloc2_10{
+        display: none;
+    }
+    .bloc2_11{
+        display: none;
+    }
+    .bloc2_12{
+        display: none;
+    }
+
+    .bloc2_1{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_2{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_3{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_4{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+
+    .bloc2_5{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 500px;
+        font-size: 1.0em;
+        margin-bottom: 5%;
+    }
+    .bloc2_6{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 500px;
+        font-size: 1.0em;
+        margin-bottom: 5%;
+    }
+    .bloc2_7{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 500px;
+        font-size: 1.0em;
+        margin-bottom: 5%;
+    }
+    .bloc2_8{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 550px;
+        font-size: 1.0em;
+        margin-bottom: 5%;
+    }
+
+    .bloc2_5 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_6 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_7 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_8 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /*Footer*/
+
+
+    
+    .NosMailsEtNuméros{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: .6em;
+    }
+
+    /*modal*/
+
+}
+@media only screen and (min-device-width : 935px) and (max-device-width : 1350px){ /*Pour tous les écrans allant de 0 à 935px*/
+
+    .PhotoBackground{
+        width: 100%;
+        height: 932px;
+    }
+
+    .BoutonEnSavoirPlus{
+        width: 50%;
+        height: 50px;  
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .BoutonEnSavoirPlusBox1 > a { /*Pour centrer le bouton en position absolute*/
+        position: absolute;
+        margin-top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .ul{
+        display: flex;
+    }
+    .h1{
+        font-size: 3.5em;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        margin-left: 3%;
+        padding: 120px;
+    }
+    .h2{
+        top: 30%;
+        left: 8%;
+        height: 187px;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    /*Containeur 2*/
+ 
+    .Containeur2 > .SousContainer2{
+        /*margin-top: 4%;*/
+        width: 100%;
+        height: 2200px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    /*Dislabe les box grid qui servent à rien*/
+    .bloc2_9{
+        display: none;
+    }
+    .bloc2_10{
+        display: none;
+    }
+    .bloc2_11{
+        display: none;
+    }
+    .bloc2_12{
+        display: none;
+    }
+
+    .bloc2_1{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_2{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_3{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+    .bloc2_4{ /*IMAGE*/
+        width: 90%;
+        height: 520px;
+        
+    }
+
+    .bloc2_5{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 295px;
+        font-size: 1.3em;
+        margin-bottom: 5%;
+    }
+    .bloc2_6{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 295px;
+        font-size: 1.3em;
+        margin-bottom: 5%;
+    }
+    .bloc2_7{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 295px;
+        font-size: 1.3em;
+        margin-bottom: 5%;
+    }
+    .bloc2_8{ /*Texte*/
+        display: block;
+        width: 90%;
+        height: 295px;
+        font-size: 1.3em;
+        margin-bottom: 5%;
+    }
+
+    .bloc2_5 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_6 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_7 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    .bloc2_8 > h2, P{ /*Modifie le contenu des blocs*/
+        margin: 2% 0% 5% 0%;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /*Footer*/
+
+
+    
+    .NosMailsEtNuméros{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.2em;
+    }
+
+}
+
+@media only screen and (min-device-width : 1350px) and (max-device-width : 1750px){ /*Pour tous les écrans allant de 0 à 935px*/
+
+
+    .BoutonEnSavoirPlus{
+        width: 50%;
+        height: 50px;  
+        position: absolute;
+        top: 60%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+    }
+
+    .BoutonEnSavoirPlusBox1 > a { /*Pour centrer le bouton en position absolute*/
+        position: absolute;
+        margin-top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .ul{
+        display: flex;
+    }
+    .h1{
+        font-size: 4.5em;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        margin-left: 3%;
+        padding: 120px;
+    }
+    .h2{
+        top: 33%;
+        left: 8%;
+        height: 187px;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+ /*En mode portrait*/
+@media only screen and (min-device-width : 820px) and (max-device-width : 1368px) and (orientation: portrait) {
+    .PhotoBackground{
+        width: 100%;
+        height: 1368px;
+    }
+}
+

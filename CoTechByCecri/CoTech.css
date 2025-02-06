@@ -1,0 +1,461 @@
+*{
+    top: 0%;
+}
+
+header{
+    display: inline-flex; /*Affiche un élément en tant que conteneur flexible que en ligne*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+header{
+    margin-top: 0%;
+    position: fixed;
+    background-color: #ffffff;
+    height: 80px;
+    z-index: 1;
+    
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #6b928350;
+    font-family: 'Montserrat', sans-serif;
+    /*
+    background-image: url("../Images/4.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:cover;
+    */
+  }
+  
+.NomDeLaSociete{
+    display: flex;/*Affiche un élément en tant que conteneur flexible au niveau du bloc*/
+    width: 20%;
+    padding-left: 1%;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.NomDeLaSociete a {
+    width: max-content;
+    font-size: 35px ;
+    font-weight: bold;
+    color: #482fd2;
+    text-decoration: none; /*pour enlever la barre qui se met automatiquement sur les balises |a| qui sont des liens*/
+
+}
+
+.BarreDeNavigation{
+    width: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul{ /*ARenitialise à 0 les valeurs padding et margin pour les liens de la barre de navigation*/
+    margin: 0;
+    padding: 0;
+}
+.ObjetDeNavigation{ /*Demande à la barre de navigation de s"aligner en bloc sur une ,même ligne*/
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+.LiensDeNavigation{
+    display: inline-block;
+    
+}
+.LiensDeNavigation, .espace{ /*J'introduis une marche à gauche de chaque liens à partir du deuxième de la barre de nav*/
+    margin-left: 20px;
+ }
+.LiensDeNavigation a { /*Modifie la couleur des elements texte de ma barre de nav*/
+    text-decoration: none;
+    color: #86acac;
+    font-weight: 600;
+}
+
+.LiensDeNavigation a:hover { /*modifie le comportement de mes elments de la barre quand la souris est au dessus d'un élément*/
+    color: rgba(0, 0, 255, 0.897);
+    font-size: 17px;
+    text-decoration: underline;
+  }
+
+.BlocBarreDeRecherche{ /*initialise le boc qui contient ma barre de recherche*/
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ContenuBlocBarreDeRecherche {/*modifie le contenu de mon bloc barre de rechrche*/
+    --padding :10px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: rgba(0, 26, 255, 0.404);
+}
+
+.BoutonRecherche{ /*modifie mon bouton recherche*/
+    font-size: 16px;
+    font-family: 'Lexend' sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    transition: box-shadow 0.25s;
+}
+.ContenuBlocBarreDeRecherche:focus-within{ /*je rajoute une ombre sur mon bloc recherche quand on ecrit un texyt*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+
+.BoutonRecherche::placeholder,
+.IConeDeRecherche{ /*modifie la couleur de l'icone de mon bouton et le texte qui s'y trouve de base*/
+    color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+.ContaineurSousLaBArreDeNavigation
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  100% ;
+    height: 200px;
+    background-color: #e7fdf8;
+    margin-top: 1%;
+    
+}
+
+
+/*
+.ContenuDuContaineur1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 95%;
+}
+
+.ContenuDuContaineur2{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50% ;
+    height: 95%;
+    background-image: url("../Images/2.jpg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+
+}
+*/
+
+.GrandeBox1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:  100% ;
+    height: 500px;
+    /*background-color: #27e971;*/
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #e9c527;*/
+    flex-direction: column;
+}
+.Sous1Box1{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #8abea1;*/
+    
+}
+.Sous1Box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #2fc070;*/
+    margin-top: 1%;
+}
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #c227e9;*/
+    background-image: url("Images/10.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    border-radius: 5px;
+}
+
+/**/
+.GrandeBox2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:  100% ;
+    height: 500px;
+    /*background-color: #27e971;*/
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.Deuxbox1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #e9c527;*/
+    flex-direction: column;
+}
+.DeuxSous1Box1{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #8abea1;*/
+    
+}
+.DeuxSous1Box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  95% ;
+    height: 45%;
+    /*background-color: #2fc070;*/
+    margin-top: 1%;
+}
+.Deuxbox2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  45% ;
+    height: 90%;
+    /*background-color: #c227e9;*/
+    background-image: url("Images/8.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    border-radius: 5px;
+}
+
+.Sous1Box1 svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.DeuxSous1Box1 svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Appartition au defilement*/
+
+[class*="reveler-"]{ /*je le demande de choisir toutes les classes qui contien reveler- */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.reveler-Visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0.1, 0, .99);
+}
+
+/*Temps d'attente sur chaque bloc que je veux afficher*/
+.reveler-1{
+    transition-delay: .2s;
+}
+.reveler-2{
+    transition-delay: .4s;
+}
+.reveler-3{
+    transition-delay: .6s;
+}
+.reveler-4{
+    transition-delay: .8s;
+}
+.reveler-5{
+    transition-delay: 1s;
+}
+.reveler-6{
+    transition-delay: 1.2s;
+}
+.reveler-7{
+    transition-delay: .2s;
+}
+.reveler-8{
+    transition-delay: .4s;
+}
+.reveler-9{
+    transition-delay: .8s;
+}
+
+/*diapo*/
+/*
+main{
+    width: 66%;
+    margin: auto;
+}
+
+.diapo{
+    position: relative;
+    overflow: hidden;
+}
+
+#nav-droite, #nav-gauche{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 3em;
+}
+
+#nav-gauche{
+left: 20px;
+}
+
+#nav-droite{
+right: 20px;
+}
+
+.ListeDeTousMesElements{
+    display: flex;
+}
+
+.UnElement{
+    flex: 1 0 100%;
+    position: relative;
+}
+.UnElement > img {
+    width: 100%;
+}
+
+.TexteAudessusDuDiapo{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(22, 104, 255, 0.438);
+    padding: 30px;
+}
+
+*/
+/*
+.GroupeGlissant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px; 
+    padding: 1% 0% 1% 0%;
+}
+.NombreDeCarte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0% 1% 0%; 
+    width: 98%;
+    height: 100%;
+    background-color: rgba(0, 255, 42, 0.404);
+    
+}
+.ContenuDesCartes{
+    width: 15%;
+    height: 100%;
+    
+}
+
+.NombreDeCarte .ContenuDesCartes {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column; 
+    color: #398383;
+    background-color: rgba(236, 8, 8, 0.25);
+    padding: 0px 40px 0px 40px;
+    border-radius: 8px;
+    backdrop-filter: blur(30px); 
+    border: 1px solid rgba(13, 37, 248, 0.842);
+    height: 100%;
+}
+.NombreDeCarte .ContenuDesCartes .ImageUtilisateur{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid  rgba(235, 14, 14, 0.788);
+    margin-bottom: 10px;
+    padding: 2px;
+    
+}
+
+.NombreDeCarte .ContenuDesCartes .Details {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 14px 0px 30px 0px;
+    color: #ae36cc;
+}
+
+.NombreDeCarte .ContenuDesCartes .EnSavoirPlus {
+    font-size: 15px;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #482fd2;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: #3f87c2b0;
+    transition: 0.2s ease;
+}
+
+.NombreDeCarte .ContenuDesCartes .EnSavoirPlus:hover{
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+*/

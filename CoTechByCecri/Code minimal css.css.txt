@@ -1,0 +1,99 @@
+p/*paragraphe*/ /*mais je peux aussi mettre h1 ou h2 etc ou deux ligne comme p, h1*/
+{
+	color: blue; /*donne la couleur au paragraphe (bleue ici)*/
+	font-weight: bold; /*paragraphe en bleu et en gras*/
+	font-size: 24px; /*taille de la police à 24*  on peut aussi utilise 1.5em par exemple*/
+	font-family: Impact, "Arial Black", Arial, Georgia, Verdana; /*changer la police */
+	font-style: italic; /*mettre en italic*/
+	text-decoration: underline; /*souligner texte*/
+	text-align: center; /*aligner texte right center ou left*/
+	border: 3px black solid; /*bordure de 3 px(taille) black (couleur) solide(trait)*/ 
+	/*il existe pour les traits : (solid, dotted, dashed, double, groove, ridge, inset, outset);*/
+	border-top: ;/*bordure en haut*/
+	border-bottom: ;/*bordure en bas*/
+	border-left: ;
+	border-right: ;
+	border-radius: 20px / 10px ;/*rondeur aux bordures (la deuxième valeur peut être absente)*/
+	box-shadow: 6px 6px 0px black; ;/*ombre pour le bloc* (décalage H de l'ombre, V de l'ombre, adoussicement de l'ombre, couleur de l'ombre*/
+	text-shadow: 2px 4px 5px ;/*ombre sur le texte directement */
+
+
+} 
+
+
+a:hover
+{
+	color: black; /*permet de changer la couleur des liens au survol de la souris*/
+
+}
+
+a:visited
+{
+	color: #888888; /*changer la couleur du lien quand il a déja été visité*/
+}
+
+/*pour juste changer la couleur d'un paragraphe par exemple
+je peux ausi le modifier depuis html 
+en ajoutant apres son attribut (p par exemple ou h1) 
+class="(nom de la classe)" et ensuite continuer*/
+ 
+ /*exemple*/
+sur /*html*/ <p class="(nom de la classe)"> (le texte à entrer) </p>
+et sur Css avant {} je devrais entrer .(nom de la classe)
+
+/*pour changer spécifiquement un mot par exemple 
+on l'entour de la balise*/ spam 
+ex: <p> Bonjour et <spam class="(nom de la classe)"> (le texte qui sera modifié (ici bienvenue)) </spam> sur mon site </p>
+
+
+
+/*pour les blocks*/
+
+h1
+{
+ width: 600px;/*manipule la largeur du block (associer à background-color: pour voir la différence*/
+ height: ;/*manipule la hauteur du block*/
+ min-width: ;/*largeur minimal*/
+ max-width: ;/*largeur maximal*/
+ min-height: ;/*hauteur minimal*/
+ max-height: ;/*hauteur maximal*/
+
+ margin: 10px;/*marge extérieur de 10 px du block*/
+ padding:  ;/*marge intéreiur du block*/
+ /*on peut aussi utiliser padding ou margin left right top ou bottom pour un seul coté etc..*/
+ /*ou tout simplement écrire*/
+ margin: 1px 2px 3px 4px; /* 1px représente(marge intérieur en haut) 2px(à droite) 3px(en bas) et 4px(à gauche)*/
+
+/*si on indique la largeur du block on peut aussi calculer automatiment les marges sur un block 
+pour le centrer sur la page avec */
+margin:auto;
+
+/*si ya trop de texte dans un block et qu'il dépasse (par le bas) on peut utiliser*/
+overflow: auto;/*(le navigateur décide ce qu'il va faire mais la plus souvent il fait défiler 
+on peut aussi utiliser scroll, visible ou hidden )*/
+word-wrap: break-word;
+/*si le mot est trop long pour le block on peut utiliser*/
+
+/*pour revenir à la ligne*/
+}
+
+
+/*flexblox*/
+
+/*pour aligner les block on ajoute la balise si dessous sur le block qui contient*/
+/*exemple*/
+h1
+{
+	display: flex;
+	flex-wrap: wrap;/*aller à la ligne quand on ressere la page*/
+	justify-content: ;/*délimiter les éléments sur la ligne*/
+	justify-content: flex-start;/*au début */
+	justify-content: flex-end;/*a la fin*/
+	justify-content: center;/*au centre*/
+	justify-content: space-between;/* de l'espace entre eux*/
+	justify-content: space-around;/*espacé partout*/
+	margin: auto;/*pour dentrer tous les éléments du block*/
+	align-content: /*la meme chose que justify content saud que c'est pour les lignes*/
+
+}
+
